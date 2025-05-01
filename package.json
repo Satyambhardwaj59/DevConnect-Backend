@@ -1,0 +1,30 @@
+{
+  "name": "dev-connect",
+  "version": "1.0.0",
+  "description": "Dev-connect website like tinder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Satyambhardwaj59/Dev-connect.git"
+  },
+  "keywords": [
+    "Backend",
+    "By",
+    "Node",
+    "Express",
+    "and",
+    "Mongo"
+  ],
+  "author": "Satyam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Satyambhardwaj59/Dev-connect/issues"
+  },
+  "homepage": "https://github.com/Satyambhardwaj59/Dev-connect#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
