@@ -38,3 +38,4 @@
 - Difference between app.use() and app.all()        ❌
 - write a dummy auth middelware for all admin    ✅
 - write a dummy auth middelware for all user and expect /user/login  ✅
+- Error Handling app.use("/", (err, req, res, next) => {}); always use it in last of all route
