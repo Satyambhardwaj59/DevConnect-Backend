@@ -31,7 +31,7 @@ const app = express();
 // });
 
 
-//  ********  Advance Routing  ********* //
+//  ********  Advance Routing with Regex ********* //
 
 app.get("/a{b}c", async (req, res) => {
     res.send({firstName: 'Satyam', lastName: 'Bhardwaj'});
