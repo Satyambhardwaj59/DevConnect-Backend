@@ -39,3 +39,15 @@
 - write a dummy auth middelware for all admin    ✅
 - write a dummy auth middelware for all user and expect /user/login  ✅
 - Error Handling app.use("/", (err, req, res, next) => {}); always use it in last of all route
+
+
+#EP-06
+
+- Create a free cluster on MongoDB official website (Mongo Atlas)
+- Install mongoose library
+- Connect your application to the Database "Connection-url"/Dev-connect
+- Call the connectDB function and connect to Database before starting application on 7777
+- create a userSchema & user Model
+- Create POST /singup API to add data to database
+- Push some documents using API calls from postman
+- Error Handling using try , catch
