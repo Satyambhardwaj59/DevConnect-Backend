@@ -72,6 +72,37 @@ app.post('/signup', async (req, res) => {
 
 });
 
+// DELETE API
+
+app.delete("/user", async (req, res) => {
+    const userId = req.body._id;
+    try {
+        const user = await User.findByIdAndDelete(userId);
+        res.send("User deleted successfully");
+        
+    } catch (error) {
+        res.status(500).send("something went wrong");
+        
+    };
+});
+
+// UPDATE API
+
+app.patch("/user", async (req, res) => {
+    const userId = req.body._id;
+    const user = req.body;
+    try {
+        const updateUser = await User.findByIdAndUpdate(userId, user, {returnDocument: "after"});
+        console.log(updateUser);
+        
+        res.send("User updated successfully");
+        
+    } catch (error) {
+        res.status(500).send("something went wrong");
+        
+    }
+})
+
 
 connectionDB().then(() => {
     console.log('Database connected successfully');
