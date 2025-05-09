@@ -54,25 +54,6 @@ app.get("/id", async (req, res) => {
     };
 });
 
-
-app.post('/signup', async (req, res) => {
-    const userObj = (req.body);
-    console.log(req.body);
-    
-
-    try {
-        // create a new user instance and save it to the database
-        const user = new User(userObj);
-        await user.save();
-
-        res.send('User created successfully');
-    } catch (error) {
-        res.status(500).send('Error creating user');
-    }
-
-});
-
-
 connectionDB().then(() => {
     console.log('Database connected successfully');
     app.listen(7777, () => {
