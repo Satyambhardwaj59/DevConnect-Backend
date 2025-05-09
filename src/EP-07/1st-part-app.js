@@ -9,7 +9,6 @@ app.use(express.json());
 app.post('/signup', async (req, res) => {
     const userObj = (req.body);
     console.log(req.body);
-    
 
     try {
         // create a new user instance and save it to the database
@@ -22,7 +21,6 @@ app.post('/signup', async (req, res) => {
     }
 
 });
-
 
 connectionDB().then(() => {``
     console.log('Database connected successfully');

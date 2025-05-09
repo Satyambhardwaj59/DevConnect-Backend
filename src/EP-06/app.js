@@ -3,13 +3,15 @@ const connectionDB = require('./config/database');
 const app = express();
 const User = require('./models/user');
 
-// middleware to parse JSON request bodies
-app.use(express.json());
-
 app.post('/signup', async (req, res) => {
-    const userObj = (req.body);
-    console.log(req.body);
-    
+    const userObj = {
+        firstName: "Guriya",
+        lastName: "Kumari",
+        email: "guriya@gmail.com",
+        password: "123456e",
+        age: 32,
+        gender: "female"
+    };
 
     try {
         // create a new user instance and save it to the database
