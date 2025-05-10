@@ -9,6 +9,8 @@ const userSchema = new Schema({
         type: String,
         required: true,
         uppercase: true,
+        minlength: 3,
+        maxlength: 20,
     },
     lastName: {
         type: String
@@ -40,6 +42,11 @@ const userSchema = new Schema({
                 throw new Error("gender data is invalid");
             }
         },
+    },
+    skills: {
+        type: Array,
+        default: ["JavaScript", "React", "Node.js"],
+        trim: true,
     },
     about: {
         type: String,
