@@ -2,6 +2,8 @@ const express = require('express');
 const connectionDB = require('./config/database');
 const app = express();
 const User = require('./models/user');
+const { validateSignupData } = require('./utils/validation');
+const bcrypt = require('bcrypt');
 
 // middleware to parse JSON request bodies
 app.use(express.json());
@@ -56,20 +58,31 @@ app.get("/id", async (req, res) => {
 
 
 app.post('/signup', async (req, res) => {
-    const userObj = req.body;
+    const {firstName, lastName, emailId, password, age, gender, skills} = req.body;
     try {
-        
-        if(userObj.skills.length > 15){
-            return res.status(400).send("Skills length should be less than 15");
-        };
+
+        // validate the request body
+        validateSignupData(req);
+
+        // password encryption
+
+        const passwordHash = await bcrypt.hash(password, 10);    // 10 is the salt rounds
 
         // create a new user instance and save it to the database
-        const user = new User(userObj);
+        const user = new User({
+            firstName,
+            lastName,
+            emailId,
+            password: passwordHash,
+            age,
+            gender,
+            skills,
+        });
         await user.save();
 
         res.send('User created successfully');
     } catch (error) {
-        res.status(500).send('Error creating user' + error.message);
+        res.status(500).send('ERROR : ' + error.message);
     }
 
 });

@@ -31,8 +31,6 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true,
-        minlength: 8,
-        maxlength: 20,
         validate(value) {
             if (! validator.isStrongPassword(value)){
                 throw new Error("Password is not strong enough it should be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one symbol");
@@ -58,6 +56,11 @@ const userSchema = new Schema({
         type: Array,
         default: ["JavaScript", "React", "Node.js"],
         trim: true,
+        validate(value) {
+            if (value.length >= 15) {
+                throw new Error("Skills length should be less than 15");
+            }
+        }
     },
     about: {
         type: String,
