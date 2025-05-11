@@ -89,3 +89,12 @@
 - Create PasswordHash using bcrypt.hash & save the user is encrupted password
 - Create login API
 - Compare emailId, Password if it is not match throw same error to avoid information leaking
+
+#EP-10
+
+- Install cookie-parse
+- Just send a dummy cookie to user
+- create GEt /profile API and check if you get the cookie back 
+- Install jsonwebtoken 
+- In login API, after email and password validation, create a JWT token and send it to user
+- Read the cookies inside your profile API and find the looged in user 
