@@ -87,3 +87,5 @@
 - Validate data in Signup API
 - Install bcrypt package
 - Create PasswordHash using bcrypt.hash & save the user is encrupted password
+- Create login API
+- Compare emailId, Password if it is not match throw same error to avoid information leaking
