@@ -12,36 +12,6 @@ const { userAuth } = require('./middleware/auth');
 app.use(express.json());
 app.use(cokkieParser());   // middleware to parse cookies
 
-app.post('/signup', async (req, res) => {
-    const {firstName, lastName, emailId, password, age, gender, skills} = req.body;
-    try {
-
-        // validate the request body
-        validateSignupData(req);
-
-        // password encryption
-
-        const passwordHash = await bcrypt.hash(password, 10);    // 10 is the salt rounds
-
-        // create a new user instance and save it to the database
-        const user = new User({
-            firstName,
-            lastName,
-            emailId,
-            password: passwordHash,
-            age,
-            gender,
-            skills,
-        });
-        await user.save();
-
-        res.send('User created successfully');
-    } catch (error) {
-        res.status(500).send('ERROR : ' + error.message);
-    }
-
-});
-
 // LOGIN API
 app.post("/login", async (req, res) => {
     const {emailId, password} = req.body;
@@ -70,29 +40,6 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// Sending connection Request
-
-app.post("/sendConnectionRequest",userAuth, async (req, res) => {
-    try {
-        const {firstName} = req.user;
-        res.send(`Connection request sent by ${firstName}`);
-    } catch (error) {
-        res.status(500).send("ERROR : " + error.message);
-        
-    }
-})
-
-// profile API
-app.get("/profile",userAuth, async (req, res) => {
-    try {
-        const user = req.user;
-        res.send(user);
-        
-    } catch (error) {
-        res.status(500).send("ERROR : " + error.message);
-        
-    }
-});
 
 connectionDB().then(() => {
     console.log('Database connected successfully');
