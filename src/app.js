@@ -58,11 +58,11 @@ app.post("/login", async (req, res) => {
         }
 
         // generate JWT token
-        const token = await jwt.sign({_id: user._id}, "DEV@Connect1234");
+        const token = await jwt.sign({_id: user._id}, "DEV@Connect1234", { expiresIn: '7d' });  // token will expire in 7 days
 
         // set cookie
-        res.cookie("token", token);
-        res.send("Login successfully");
+        res.cookie("token", token,  {expires: new Date(Date.now() + 7 * 86400000 )}); // cookie will expire in 7 days
+        res.send("Login successfully"); 
 
     } catch (error) {
         res.status(500).send("ERROR : " + error.message);
