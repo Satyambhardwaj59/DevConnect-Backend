@@ -43,14 +43,14 @@
 
 #EP-06
 
-- Create a free cluster on MongoDB official website (Mongo Atlas)
-- Install mongoose library
-- Connect your application to the Database "Connection-url"/Dev-connect
-- Call the connectDB function and connect to Database before starting application on 7777
-- create a userSchema & user Model
-- Create POST /singup API to add data to database
-- Push some documents using API calls from postman
-- Error Handling using try , catch
+- Create a free cluster on MongoDB official website (Mongo Atlas) ✅
+- Install mongoose library  ✅
+- Connect your application to the Database "Connection-url"/Dev-connect     ✅
+- Call the connectDB function and connect to Database before starting application on 7777  ✅
+- create a userSchema & user Model      ✅
+- Create POST /singup API to add data to database       ✅
+- Push some documents using API calls from postman      ✅
+- Error Handling using try , catch      ✅
 
 #EP-07
 
