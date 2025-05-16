@@ -70,43 +70,43 @@
 
 #EP-08
 
-- Explore schematype options from the documantation
-- add required, unique, lowercase, min, minLength, trim
-- Add default 
-- Create a custom validate function for gender
-- Imporve the DB schema - PUT all appropiate validation on each field in Schema
-- Add timestamps to the userSchema
-- Add API level validation on Patch request & post API
-- DATA Sanitizing - Add API validation for each field
-- Install validator
-- Explore validator library function and use validator function for password, email, and Photo URL
-- NEVER TRUST req.body (incoming data)
+- Explore schematype options from the documantation ✅
+- add required, unique, lowercase, min, minLength, trim ✅
+- Add default   ✅
+- Create a custom validate function for gender  ✅
+- Imporve the DB schema - PUT all appropiate validation on each field in Schema     ✅
+- Add timestamps to the userSchema      ✅
+- Add API level validation on Patch request & post API      ✅
+- DATA Sanitizing - Add API validation for each field       ✅
+- Install validator     ✅
+- Explore validator library function and use validator function for password, email, and Photo URL  ✅
+- NEVER TRUST req.body (incoming data)      ✅
 
 #EP-09
 
-- Validate data in Signup API
-- Install bcrypt package
-- Create PasswordHash using bcrypt.hash & save the user is encrupted password
-- Create login API
-- Compare emailId, Password if it is not match throw same error to avoid information leaking
+- Validate data in Signup API   ✅
+- Install bcrypt package        ✅
+- Create PasswordHash using bcrypt.hash & save the user is encrupted password   ✅
+- Create login API      ✅
+- Compare emailId, Password if it is not match throw same error to avoid information leaking    ✅
 
 #EP-10
 
-- Install cookie-parse
-- Just send a dummy cookie to user
-- create GEt /profile API and check if you get the cookie back 
-- Install jsonwebtoken 
-- In login API, after email and password validation, create a JWT token and send it to user
-- Read the cookies inside your profile API and find the looged in user 
-- userAuth Middleware
-- Add the userAuth middleware in profile API and a new sendConnectionRequest API
-- Set the expiry of JWT token and cookies to 7 days
-- Create userSchema method to getJWT()
-- Create userSchema method to comparePassword(password)
+- Install cookie-parse      ✅
+- Just send a dummy cookie to user      ✅
+- create GEt /profile API and check if you get the cookie back  ✅
+- Install jsonwebtoken      ✅
+- In login API, after email and password validation, create a JWT token and send it to user     ✅
+- Read the cookies inside your profile API and find the looged in user      ✅
+- userAuth Middleware       ✅
+- Add the userAuth middleware in profile API and a new sendConnectionRequest API        ✅
+- Set the expiry of JWT token and cookies to 7 days     ✅
+- Create userSchema method to getJWT()      ✅
+- Create userSchema method to comparePassword(password)     ✅
 
 # EP-11
 
-- Explore tinder APIs
+- Explore tinder APIs   
 - Create a list of all API you can think of in DEV-connect
 - Group multiple routes under respective routers
 - Read documentation for express.Router
