@@ -120,14 +120,14 @@
 
 # EP-12
 
-- Create Connection Request Schema
-- Send Connection Request API
-- Proper Validation of Data
-- Think about all corner cases
+- Create Connection Request Schema      ✅
+- Send Connection Request API           ✅
+- Proper Validation of Data             ✅
+- Think about all corner cases          ✅
 - $or query $and query in mongoose  -https://www.mongodb.com/docs/manual/reference/operator/query/
-- schema.pre("save") function
-- Read more about indexes in MongoDB
-- Why do we need index in DB
-- What is the advantages and disadvantage of creating of indexes?
+- schema.pre("save") function       ✅
+- Read more about indexes in MongoDB        ✅
+- Why do we need index in DB        ✅
+- What is the advantages and disadvantage of creating of indexes?       
 - Read this artical about compound indexes - https://www.mongodb.com/docs/manual/core/indexes/index-types/index-compound/
-- ALWAYS THINK ABOUT CORNER CASES
+- ALWAYS THINK ABOUT CORNER CASES   ✅
