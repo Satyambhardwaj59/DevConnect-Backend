@@ -106,17 +106,17 @@
 
 # EP-11
 
-- Explore tinder APIs   
-- Create a list of all API you can think of in DEV-connect
-- Group multiple routes under respective routers
-- Read documentation for express.Router
-- Create routes folder for managing auth, profile, request routers
-- Create authRouter, profileRouter, requestRouter
-- Import these router in app.js
-- Create POST /logout API
-- Create PATCH /profile/edit
-- Create PATCH /profile/password API => forgot password API
-- Make you validate all data in every post, patch apis
+- Explore tinder APIs   ✅
+- Create a list of all API you can think of in DEV-connect      ✅
+- Group multiple routes under respective routers    ✅
+- Read documentation for express.Router     
+- Create routes folder for managing auth, profile, request routers      ✅
+- Create authRouter, profileRouter, requestRouter       ✅
+- Import these router in app.js     ✅
+- Create POST /logout API           ✅
+- Create PATCH /profile/edit        ✅
+- Create PATCH /profile/password API => forgot password API     ✅
+- Make you validate all data in every post, patch apis      ✅
 
 # EP-12
 
