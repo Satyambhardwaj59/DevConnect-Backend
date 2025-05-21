@@ -131,3 +131,7 @@
 - What is the advantages and disadvantage of creating of indexes?       
 - Read this artical about compound indexes - https://www.mongodb.com/docs/manual/core/indexes/index-types/index-compound/
 - ALWAYS THINK ABOUT CORNER CASES   ✅
+
+# EP-13 
+
+- Write code for proper validation of POST /request/review/:status/:requestId  API
