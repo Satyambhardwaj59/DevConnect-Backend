@@ -135,3 +135,6 @@
 # EP-13 
 
 - Write code for proper validation of POST /request/review/:status/:requestId  API
+- Thought Process - POST vs GET
+- Read about ref and populate https://mongoosejs.com/docs/populate.html
+- Create GET /user/connection/received with all checks
