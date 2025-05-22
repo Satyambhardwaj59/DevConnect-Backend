@@ -138,3 +138,4 @@
 - Thought Process - POST vs GET
 - Read about ref and populate https://mongoosejs.com/docs/populate.html
 - Create GET /user/connection/received with all checks
+- Create GET /user/connection API and test it
