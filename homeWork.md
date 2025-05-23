@@ -139,3 +139,8 @@
 - Read about ref and populate https://mongoosejs.com/docs/populate.html
 - Create GET /user/connection/received with all checks
 - Create GET /user/connection API and test it
+
+# EP-14
+
+- Build logic for GET /feed API
+- Explore $nin, $ne, $and and other query operator
