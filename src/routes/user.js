@@ -89,7 +89,7 @@ userRouter.get("/feed", userAuth, async (req, res) => {
         res.status(500).send("ERROR : " + error.message);
         
     }
-})
+});
 
 
 module.exports = userRouter;

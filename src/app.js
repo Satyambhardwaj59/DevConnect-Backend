@@ -3,7 +3,9 @@ const connectionDB = require('./config/database');
 const app = express();
 const cokkieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
+const cors = require('cors');
 
+app.use(cors());
 app.use(express.json());    // middleware to parse JSON request bodies
 app.use(cokkieParser());   // middleware to parse cookies
 
