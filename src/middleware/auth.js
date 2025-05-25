@@ -6,7 +6,7 @@ const userAuth = async (req, res, next) => {
         const cookie = req.cookies;
         const {token} = cookie;
         if(!token ){
-            throw new Error("Token not found");
+            throw new Error("Please Login!!!!");
         }
 
         const decodedData = await jwt.verify(token, "DEV@Connect1234");
@@ -19,7 +19,7 @@ const userAuth = async (req, res, next) => {
         next();
         
     } catch (error) {
-        res.status(400).send("ERROR : " + error.message);
+        res.status(401).send("ERROR : " + error.message);
         
     }
     
