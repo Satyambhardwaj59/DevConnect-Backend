@@ -1,4 +1,4 @@
-#EP-03
+# EP-03
 
 - Create a repository  ✅
 - Initialize the repository     ✅
@@ -12,7 +12,7 @@
 - What is use of "-g" while npm install     ❌
 - Difference between caret and tilda [ ^ vs ~ ]     ✅
 
-#EP-04
+# EP-04
 
 - Initialize git    ✅
 - .gitignore        ✅
@@ -27,7 +27,7 @@
 - Reading query params in the routes    ✅
 - Reading the Dynamic Routes    ✅
 
-#EP-05
+# EP-05
 
 - Multiple route Handeller - Play with the code ✅
 - next();   ❌
@@ -41,7 +41,7 @@
 - Error Handling app.use("/", (err, req, res, next) => {}); always use it in last of all route
 
 
-#EP-06
+# EP-06
 
 - Create a free cluster on MongoDB official website (Mongo Atlas) ✅
 - Install mongoose library  ✅
@@ -52,7 +52,7 @@
 - Push some documents using API calls from postman      ✅
 - Error Handling using try , catch      ✅
 
-#EP-07
+# EP-07
 
 - JS Object vs JSON (difference)    
 - Add The express.json() middleware to your code    ✅
@@ -68,7 +68,7 @@
 - What are the options in a Model.findOneAndUpdate method, explore about it     ✅
 - API - update the user by emailId      ✅
 
-#EP-08
+# EP-08
 
 - Explore schematype options from the documantation ✅
 - add required, unique, lowercase, min, minLength, trim ✅
@@ -82,7 +82,7 @@
 - Explore validator library function and use validator function for password, email, and Photo URL  ✅
 - NEVER TRUST req.body (incoming data)      ✅
 
-#EP-09
+# EP-09
 
 - Validate data in Signup API   ✅
 - Install bcrypt package        ✅
@@ -90,7 +90,7 @@
 - Create login API      ✅
 - Compare emailId, Password if it is not match throw same error to avoid information leaking    ✅
 
-#EP-10
+# EP-10
 
 - Install cookie-parse      ✅
 - Just send a dummy cookie to user      ✅
