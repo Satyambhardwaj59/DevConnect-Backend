@@ -5,7 +5,7 @@ const { validateSignupData } = require('../utils/validation');
 const bcrypt = require('bcrypt');
 
 authRouter.post('/signup', async (req, res) => {
-    const {firstName, lastName, emailId, password, age, gender, skills} = req.body;
+    const {firstName, lastName, emailId, password} = req.body;
     try {
 
         // validate the request body
@@ -21,13 +21,14 @@ authRouter.post('/signup', async (req, res) => {
             lastName,
             emailId,
             password: passwordHash,
-            age,
-            gender,
-            skills,
         });
-        await user.save();
+        const savedUser = await user.save();
+        const token = await  savedUser.getJWT();
 
-        res.send('User created successfully');
+        // set cookie
+        res.cookie("token", token,  {expires: new Date(Date.now() + 7 * 86400000 )});
+
+        res.json({message:'User created successfully', user: savedUser});
     } catch (error) {
         res.status(500).send('ERROR : ' + error.message);
     }
@@ -69,3 +70,8 @@ authRouter.post('/logout', async (req, res) => {
 
 
 module.exports = authRouter;
+
+// 
+            // age,
+            // gender,
+            // skills,

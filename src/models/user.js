@@ -41,13 +41,13 @@ const userSchema = new Schema({
     },
     age: {
         type: Number,
-        required: true,
+        default: 19,
         min: 18,
         max: 65,
     },
     gender: {
         type: String,
-        required: true,
+        default: "male",
         enum: {
             values: ["male", "female", "other"],
             message: "{VALUE} gender is invalid"
