@@ -40,7 +40,7 @@ requestRouter.post("/request/send/:status/:toUserId",userAuth, async (req, res) 
         res.status(200).json({ message: `Connection request sent with status: ${status}` });
 
     } catch (error) {
-        res.status(500).send("ERROR : " + error.message);
+        res.status(500).json({message : "ERROR : " + error.message});
         
     }
 });
@@ -73,7 +73,7 @@ requestRouter.post("/request/review/:status/:requestId", userAuth, async (req, r
         res.status(200).json({message: `Connection request ${status} successfully`, data});
         
     } catch (error) {
-        res.status(500).send("ERROR : " + error.message);
+        res.status(500).json({message : "ERROR : " + error.message});
         
     }
 });

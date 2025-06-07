@@ -30,7 +30,7 @@ authRouter.post('/signup', async (req, res) => {
 
         res.json({message:'User created successfully', user: savedUser});
     } catch (error) {
-        res.status(500).send('ERROR : ' + error.message);
+        res.status(500).json({message : "ERROR : " + error.message});
     }
 
 });
@@ -58,14 +58,14 @@ authRouter.post("/login", async (req, res) => {
         res.json({ user}); 
 
     } catch (error) {
-        res.status(500).send("ERROR : " + error.message);
+        res.status(500).json({message : "ERROR : " + error.message});
         
     }
 });
 
 authRouter.post('/logout', async (req, res) => {
     res.cookie("token", null, {expires: new Date(Date.now())}); // cookie will expire immediately
-    res.send("Logout successfully");
+    res.json({message: "Logout successfully"});
 })
 
 

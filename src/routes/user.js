@@ -21,7 +21,7 @@ userRouter.get("/user/connection/received", userAuth, async (req, res) => {
 
         res.status(200).json({ message: "Panding Requests is here", data: receivedRequsts });
     } catch (error) {
-        res.status(500).send("ERROR : " + error.message);
+        res.status(500).json({message : "ERROR : " + error.message});
         
     }
 });
@@ -47,7 +47,7 @@ userRouter.get("/user/connection", userAuth, async (req, res) => {
         res.status(200).json({ message: "Connections is here", data: Data });
 
     } catch (error) {
-        res.status(500).send("ERROR : " + error.message);
+        res.status(500).json({message : "ERROR : " + error.message});
         
     }
 });
@@ -86,7 +86,7 @@ userRouter.get("/feed", userAuth, async (req, res) => {
         res.status(200).json({ message: "Connections is here", data: users });
         
     } catch (error) {
-        res.status(500).send("ERROR : " + error.message);
+        res.status(500).json({message : "ERROR : " + error.message});
         
     }
 });
