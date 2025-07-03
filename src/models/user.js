@@ -75,7 +75,7 @@ const userSchema = new Schema({
     },
     photoUrl: {
         type: String,
-        default: "https://static-00.iconduck.com/assets.00/web-developer-illustration-1004x1024-wcqgbag3.png",
+        default: "https://img.freepik.com/premium-vector/user-circle-with-blue-gradient-circle_78370-4727.jpg?semt=ais_hybrid&w=740",
         validate(value){
             if(! validator.isURL(value)){
                 throw new Error("Invalid URL please provide a valid URL");

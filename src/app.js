@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const connectionDB = require('./config/database');
 const app = express();
@@ -5,8 +6,10 @@ const cokkieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 
+
 app.use(cors({
     origin: "http://localhost:5173",
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     credentials: true
 }));
 app.use(express.json());    // middleware to parse JSON request bodies
