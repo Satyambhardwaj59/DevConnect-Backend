@@ -8,7 +8,7 @@ const cors = require('cors');
 
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: ["https://devconnect-frontend-cbbx.onrender.com", "http://localhost:5173"],
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     credentials: true
 }));
