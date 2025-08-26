@@ -26,7 +26,16 @@ authRouter.post('/signup', async (req, res) => {
         const token = await  savedUser.getJWT();
 
         // set cookie
-        res.cookie("token", token,  {expires: new Date(Date.now() + 7 * 86400000 )});
+        // res.cookie("token", token,  {expires: new Date(Date.now() + 7 * 86400000 )});
+
+        // set cookie
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: true, // required for HTTPS (Render is HTTPS)
+            sameSite: "none",
+            expires: new Date(Date.now() + 7 * 86400000 )
+        }); // cookie will expire in 7 days
+        
 
         res.json({message:'User created successfully', user: savedUser});
     } catch (error) {
@@ -53,9 +62,16 @@ authRouter.post("/login", async (req, res) => {
         // generate JWT token
         const token = await  user.getJWT();
 
+         // set cookie
+        // res.cookie("token", token,  {expires: new Date(Date.now() + 7 * 86400000 )}); // cookie will expire in 7 days
         // set cookie
-        res.cookie("token", token,  {expires: new Date(Date.now() + 7 * 86400000 )}); // cookie will expire in 7 days
-        res.json({ user}); 
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: true, // required for HTTPS (Render is HTTPS)
+            sameSite: "none",
+            expires: new Date(Date.now() + 7 * 86400000 )
+        }); // cookie will expire in 7 days
+        res.json({ user});
 
     } catch (error) {
         res.status(500).json({message : "ERROR : " + error.message});
